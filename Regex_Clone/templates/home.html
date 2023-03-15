@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Validations</title>
+    <style>
+        body{
+            background-color: rgb(198, 195, 195);
+            width: 60%;
+            height: 50%;
+            margin: 5% 20% 25% 28%;
+        }
+        .wide{
+            border: 2px solid black;
+            border-radius: 5px;
+            width: 80%;
+            padding: 10px 10px 10px 10px;
+        }
+        button{
+            border: 2px solid black;
+            border-radius: 5px;
+            width: 12%;
+            padding: 3px 3px 3px 3px;
+        }
+</style>
+</head>
+
+<body>
+    <h1>Regular Expressions Validations..!</h1>
+    <form action="">
+        <div>
+            <input class="wide" type="text" name="input_string" placeholder="Insert your test string here">
+        </div>
+        <br>
+        <div>
+            <input class="wide" type="text" name="input_pattern" placeholder="Insert your regex here">
+        </div>
+        <br>
+        <div>
+            <button>Enter</button>
+        </div>
+    </form>
+    <div>
+        <h3>Matches :</h3>
+        {% if result %}
+        <p>----------------------------------------------------------------------------------------------------------------------------------------</p>
+        <ul>
+            <li>Number of the matches : {{length}}</li><br>
+            <li>{{result}}</li>
+        </ul>
+        <p>----------------------------------------------------------------------------------------------------------------------------------------</p>
+        <ul>
+            <li>Entered String : {{string_input}}</li><br>
+            <li>Entered Pattern: {{pattern_input}}</li>
+        </ul>
+        <p>----------------------------------------------------------------------------------------------------------------------------------------</p>
+        {% else %}
+        <p>No Match found!!!</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>
